@@ -1,0 +1,18 @@
+{
+  "type":"record",
+  "name":"Purchase_Coupons",
+  "namespace":"io.confluent.developer.avro",
+  "fields":[
+    {"name":"item", "type":"string"},
+    {"name":"total_cost","type":"double"},
+    {"name":"customer_id","type":"string"},
+    {
+      "name": "category",
+      "type": {
+        "type": "enum",
+        "name": "purchase_type",
+        "symbols": ["RETAIL","WHOLESALE"]
+      }
+    }
+  ]
+}
